@@ -171,7 +171,7 @@ Siga os passos abaixo para rodar o projeto em seu ambiente local.
 **Painel de Login**     
 ![Login Panel](https://placehold.co/800x450/0a0a0a/21c25e?text=Login+Panel)
 
-**Dashboard do Usuário**
+**Dashboard do Usuário**     
 ![User Dashboard](https://placehold.co/800x450/0a0a0a/21c25e?text=Dashboard)
 
 ---
