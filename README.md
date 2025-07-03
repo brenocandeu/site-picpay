@@ -166,13 +166,14 @@ Siga os passos abaixo para rodar o projeto em seu ambiente local.
 ## 📸 Screenshots
 
 **Página Inicial**      
-![Landing Page](https://placehold.co/800x450/0a0a0a/21c25e?text=Landing+Page)
+![image](https://github.com/user-attachments/assets/0be0a422-bb80-437c-ac73-30d1095f829c)
 
 **Painel de Login**     
-![Login Panel](https://placehold.co/800x450/0a0a0a/21c25e?text=Login+Panel)
+![Landing Page](https://github.com/user-attachments/assets/c7427a26-51f4-4705-ad4f-cedd5756c64a)
 
 **Dashboard do Usuário**     
-![User Dashboard](https://placehold.co/800x450/0a0a0a/21c25e?text=Dashboard)
+![image](https://github.com/user-attachments/assets/fc94b065-65dd-47aa-a84f-d02529a80f0a)
+
 
 ---
 
