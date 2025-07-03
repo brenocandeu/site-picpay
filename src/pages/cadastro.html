@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua Conta - Picpay</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/pages/pagina_inicial.css">
+    <link rel="stylesheet" href="../css/pages/auth.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-panel">
+            <div class="row g-0">
+                <div class="col-lg-6 branding-column">
+                    <a class="navbar-brand mb-4" href="../../index.html">
+                        <svg width="110" height="37" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clip-path="url(#logo_svg__a-auth)"><path d="M18.504 23.928h4.212V11.661h-4.212v12.267Zm5.661-20.61H21.33v2.835h2.835V3.318ZM8.271 4.695H4.212V8.25h3.771c2.394 0 3.771 1.161 3.771 3.339S10.377 15 7.983 15H4.212V8.322H0v15.606h4.212v-5.373h3.996c4.86 0 7.695-2.61 7.695-7.11-.009-4.212-2.763-6.75-7.632-6.75ZM27 .483h-8.496v8.496H27V.483Zm-1.377 7.038h-5.661V1.86h5.661v5.661Zm24.678-2.826h-3.843V8.25h3.627c2.394 0 3.771 1.161 3.771 3.339S52.479 15 50.085 15h-3.627V8.322h-4.212v15.606h4.212v-5.373h3.843c4.86 0 7.695-2.61 7.695-7.11 0-4.212-2.835-6.75-7.695-6.75Zm35.343 4.5-3.627 9.144-3.627-9.144h-4.356l5.805 14.733-2.25 5.589h4.428L90 9.195h-4.356Zm-18.873-.072c-2.538 0-4.5.585-6.678 1.665l1.305 2.907c1.521-.873 3.051-1.305 4.428-1.305 2.034 0 3.051.873 3.051 2.466v.288h-4.068c-3.627 0-5.589 1.665-5.589 4.428 0 2.682 1.89 4.572 5.085 4.572 2.034 0 3.483-.729 4.644-1.962v1.593h4.14v-9.576c-.144-3.123-2.394-5.076-6.318-5.076Zm2.475 9.864c-.432 1.233-1.665 2.25-3.411 2.25-1.449 0-2.322-.729-2.322-1.89s.801-1.665 2.394-1.665h3.339v1.305Zm-35.784 1.746c-2.034 0-3.483-1.593-3.483-3.996 0-2.322 1.449-3.915 3.483-3.915 1.449 0 2.538.585 3.339 1.593l2.835-2.034c-1.305-1.962-3.555-3.123-6.39-3.123-4.428-.072-7.479 2.979-7.479 7.479s3.051 7.479 7.479 7.479c3.051 0 5.301-1.233 6.534-3.267l-2.907-1.962c-.729 1.161-1.89 1.746-3.411 1.746Z" fill="var(--primary-color)"></path></g><defs><clipPath id="logo_svg__a-auth"><path fill="#fff" transform="translate(0 .483)" d="M0 0h90v29.034H0z"></path></clipPath></defs></svg>
+                    </a>
+                    <h1 class="text-glow">O futuro da sua vida financeira começa aqui.</h1>
+                    <p class="mt-3">Junte-se a milhões de pessoas que escolheram uma forma mais inteligente de lidar com o dinheiro.</p>
+                    <ul class="benefits-list">
+                        <li><i class="bi bi-check-circle-fill"></i> Conta digital 100% gratuita.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Seu saldo rende mais que a poupança.</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Cartão de crédito sem anuidade.</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 form-column">
+                    <div id="register-step-1">
+                        <h2>Crie sua conta</h2>
+                        <p>Vamos começar com seus dados básicos.</p>
+                        <form class="mt-4" id="registrationForm" novalidate>
+                            <div class="mb-3">
+                                <label for="cpf" class="form-label">CPF</label>
+                                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                                <div class="invalid-feedback">Por favor, insira um CPF válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Seu nome como no documento" required>
+                                <div class="invalid-feedback">Por favor, use apenas letras e espaços.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nascimento" class="form-label">Data de Nascimento</label>
+                                <input type="text" class="form-control" id="nascimento" placeholder="DD/MM/AAAA" required>
+                                <div class="invalid-feedback">Por favor, insira uma data válida.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="celular" class="form-label">Celular</label>
+                                <input type="text" class="form-control" id="celular" placeholder="(00) 00000-0000" required>
+                                <div class="invalid-feedback">Por favor, insira um celular válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="seu.melhor@email.com" required>
+                                <div class="invalid-feedback">Por favor, insira um e-mail válido.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Crie uma senha</label>
+                                <div class="password-wrapper">
+                                    <input type="password" class="form-control" id="password" placeholder="Pelo menos 8 caracteres" required>
+                                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                </div>
+                                <div class="invalid-feedback">A senha deve ter no mínimo 8 caracteres.</div>
+                            </div>
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="terms" required>
+                                <label class="form-check-label" for="terms">
+                                Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.
+                                </label>
+                                <div class="invalid-feedback">Você deve aceitar os termos para continuar.</div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-glow btn-lg">Criar Conta</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="register-step-2" class="d-none">
+                        <h2>Falta pouco!</h2>
+                        <p>Enviamos um código de verificação para o seu e-mail. Por favor, insira abaixo para ativar sua conta.</p>
+                        <form class="mt-4" id="emailVerifyForm">
+                            <div class="mb-3 code-inputs">
+                                <input type="text" maxlength="1" inputmode="numeric" class="form-control code-input" required>
+                                <input type="text" maxlength="1" inputmode="numeric" class="form-control code-input" required>
+                                <input type="text" maxlength="1" inputmode="numeric" class="form-control code-input" required>
+                                <input type="text" maxlength="1" inputmode="numeric" class="form-control code-input" required>
+                                <input type="text" maxlength="1" inputmode="numeric" class="form-control code-input" required>
+                                <input type="text" maxlength="1" inputmode="numeric" class="form-control code-input" required>
+                            </div>
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-glow btn-lg">Verificar e Ativar</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="../../index.html" class="back-to-home-link">
+        <i class="bi bi-arrow-left"></i> Voltar
+    </a>
+
+    <script src="../scripts/commons/auth.js"></script>
+</body>
+</html>

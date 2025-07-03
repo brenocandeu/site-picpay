@@ -1,0 +1,433 @@
+.dashboard-body{
+    background-color: var(--bg-color);
+}
+
+.dashboard-container{
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar (Menu Lateral) */
+#sidebar{
+    width: 280px;
+    background-color: var(--bg-secondary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+}
+
+.sidebar-header{
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+#sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar .nav-link{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: var(--text-secondary-color);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#sidebar .nav-link i{
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+#sidebar .nav-link:hover{
+    background-color: var(--bg-tertiary-color);
+    color: var(--text-color);
+}
+
+#sidebar .nav-link.active{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.sidebar-footer{
+    margin-top: auto;
+}
+
+/* Área de Conteúdo Principal */
+#main-content{
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.page-header h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.page-header p{
+    font-size: 1.2rem;
+    color: var(--text-secondary-color);
+}
+
+/* Componentes Específicos do Dashboard */
+.balance-card{
+    background-color: var(--bg-secondary-color);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.balance-card span{
+    color: var(--text-secondary-color);
+    font-weight: 500;
+}
+
+.balance-card h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.balance-card i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.section-subtitle{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.quick-actions{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+}
+
+.action-card{
+    background-color: var(--bg-secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.action-card.lg{
+    padding: 40px 20px;
+}
+
+.action-card:hover{
+    transform: translateY(-5px);
+    background-color: var(--bg-tertiary-color);
+}
+
+.action-card i{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.transaction-list{
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-list li{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transaction-list .icon-wrapper{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--bg-tertiary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.transaction-list .icon-wrapper i{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.transaction-list .icon-wrapper.income i{
+    color: #28a745;
+}
+
+.transaction-list .info{
+    flex-grow: 1;
+}
+
+.transaction-list .info strong{
+    display: block;
+    color: var(--text-color);
+}
+
+.transaction-list .info span{
+    font-size: 0.9rem;
+    color: var(--text-secondary-color);
+}
+
+.transaction-list .amount{
+    font-weight: 600;
+}
+
+.transaction-list .amount.expense{
+    color: var(--text-color);
+}
+
+.transaction-list .amount.income{
+    color: #28a745;
+}
+
+.link-more-center{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.credit-card-display img{
+    max-width: 400px;
+    display: block;
+    margin: 20px auto 40px auto;
+    border-radius: 15px;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.2); */
+}
+
+/*--------------------------------------------------------------
+# AI Assistant Chatbot
+--------------------------------------------------------------*/
+.ai-fab{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1050;
+    transition: all 0.3s ease;
+}
+
+.ai-fab:hover{
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(33, 194, 94, 0.4);
+}
+
+.ai-chat-window{
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 370px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 80vh;
+    background-color: var(--bg-secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1040;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-chat-window.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chat-header h5{
+    margin: 0;
+    font-weight: 600;
+}
+
+.chat-header h5 i{
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.close-chat-btn{
+    background: none;
+    border: none;
+    color: var(--text-secondary-color);
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+}
+
+.chat-body{
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chat-message{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.chat-message p{
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.chat-message.bot p{
+    background-color: var(--bg-tertiary-color);
+    color: var(--text-secondary-color);
+    border-bottom-left-radius: 2px;
+    align-self: flex-start;
+}
+
+.chat-message.user p{
+    background-color: var(--primary-color);
+    color: #fff;
+    border-bottom-right-radius: 2px;
+    align-self: flex-end;
+}
+
+.chat-footer{
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+#chat-input{
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    border-radius: 50px;
+    padding: 10px 15px;
+    color: var(--text-color);
+    outline: none;
+}
+
+#chat-input:focus{
+    border-color: var(--primary-color);
+}
+
+#send-chat-btn{
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+# Dashboard - Página de Perfil
+--------------------------------------------------------------*/
+.content-panel{
+    background-color: var(--bg-secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px; /* Bordas arredondadas como na tela de login */
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.panel-section{
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.panel-section:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.panel-section h4{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.panel-section hr{
+    border-color: var(--border-color);
+    opacity: 0.5;
+}
+
+/* Estilos dos formulários */
+.content-panel .form-label{
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.content-panel .form-control{
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.content-panel .form-control:focus{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(33, 194, 94, 0.2);
+}
+
+.content-panel .form-control[readonly]{
+    background-color: var(--bg-tertiary-color);
+    cursor: not-allowed;
+}
+
+.content-panel .form-control[readonly]:focus{
+    box-shadow: none;
+}

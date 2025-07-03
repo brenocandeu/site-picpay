@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicPay</title>
+    <!-- Importação do Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Importando o Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importando a fonte "Poppins" -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Importando o pacote de ícones do Bootstrap Icons (versão 1.11.3) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Importando o AOS (Animate On Scroll), biblioteca que adiciona animações ao rolar a página -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Importando o CSS personalizado da página inicial do projeto -->
+    <link rel="stylesheet" href="src/css/pages/pagina_inicial.css">
+
+    <!-- Importando o CSS GLOBAL da página inicial do projeto -->
+    <link rel="stylesheet" href="src/css/global.css">
+</head>
+<body>
+    <div id="navigation-preloader">
+        <img src="https://ib.picpay.com/_next/static/media/picpay-loading.b8dbcc8a.png" alt="Carregando..." class="preloader-image">
+    </div>
+
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <svg width="90" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clip-path="url(#logo_svg__a)"><path d="M18.504 23.928h4.212V11.661h-4.212v12.267Zm5.661-20.61H21.33v2.835h2.835V3.318ZM8.271 4.695H4.212V8.25h3.771c2.394 0 3.771 1.161 3.771 3.339S10.377 15 7.983 15H4.212V8.322H0v15.606h4.212v-5.373h3.996c4.86 0 7.695-2.61 7.695-7.11-.009-4.212-2.763-6.75-7.632-6.75ZM27 .483h-8.496v8.496H27V.483Zm-1.377 7.038h-5.661V1.86h5.661v5.661Zm24.678-2.826h-3.843V8.25h3.627c2.394 0 3.771 1.161 3.771 3.339S52.479 15 50.085 15h-3.627V8.322h-4.212v15.606h4.212v-5.373h3.843c4.86 0 7.695-2.61 7.695-7.11 0-4.212-2.835-6.75-7.695-6.75Zm35.343 4.5-3.627 9.144-3.627-9.144h-4.356l5.805 14.733-2.25 5.589h4.428L90 9.195h-4.356Zm-18.873-.072c-2.538 0-4.5.585-6.678 1.665l1.305 2.907c1.521-.873 3.051-1.305 4.428-1.305 2.034 0 3.051.873 3.051 2.466v.288h-4.068c-3.627 0-5.589 1.665-5.589 4.428 0 2.682 1.89 4.572 5.085 4.572 2.034 0 3.483-.729 4.644-1.962v1.593h4.14v-9.576c-.144-3.123-2.394-5.076-6.318-5.076Zm2.475 9.864c-.432 1.233-1.665 2.25-3.411 2.25-1.449 0-2.322-.729-2.322-1.89s.801-1.665 2.394-1.665h3.339v1.305Zm-35.784 1.746c-2.034 0-3.483-1.593-3.483-3.996 0-2.322 1.449-3.915 3.483-3.915 1.449 0 2.538.585 3.339 1.593l2.835-2.034c-1.305-1.962-3.555-3.123-6.39-3.123-4.428-.072-7.479 2.979-7.479 7.479s3.051 7.479 7.479 7.479c3.051 0 5.301-1.233 6.534-3.267l-2.907-1.962c-.729 1.161-1.89 1.746-3.411 1.746Z" fill="var(--primary-color)"></path></g><defs><clipPath id="logo_svg__a"><path fill="#fff" transform="translate(0 .483)" d="M0 0h90v29.034H0z"></path></clipPath></defs></svg>
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <button id="theme-switcher" class="btn btn-outline-light btn-sm me-3"><i class="bi bi-sun-fill"></i></button>
+                <a href="src/pages/login.html" class="btn btn-outline-light me-2 d-none d-sm-block" id="login-link">Login</a>
+                <a href="src/pages/cadastro.html" class="btn btn-glow">Criar Conta</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="d-flex align-items-center hero-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
+                        <h1>A revolução bancária digital chegou.</h1>
+                        <h2 class="mt-3 hero-subtitle">NexaBank: Tecnologia financeira transparente e inovadora, desenhada para o seu futuro.</h2>
+                        <div class="d-flex flex-column align-items-center align-items-lg-start mt-4">
+                            <a href="#" class="btn btn-glow btn-lg">Abra sua conta agora</a>
+                            <small class="mt-2 microcopy">✓ Gratuito e leva menos de 5 minutos.</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+                        <img src="https://placehold.co/600x400/1a1a1a/21C25E?text=Interface+Digital" class="img-fluid" alt="Interface de Banco Digital Moderna">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section-bg">
+            <div class="container">
+                <div class="row text-center">
+                    
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-box">
+                            <i class="bi bi-people-fill stat-icon"></i>
+                            <div class="stat-info">
+                                <h3><span class="counter" data-target="15" data-prefix="+">0</span> Milhões</h3>
+                                <p>de clientes confiam na gente</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-box">
+                            <i class="bi bi-graph-up-arrow stat-icon"></i>
+                            <div class="stat-info">
+                                <h3><span class="counter" data-target="500" data-prefix="+">0</span> Milhões</h3>
+                                <p>de transações todos os meses</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-box">
+                            <i class="bi bi-patch-check-fill stat-icon"></i>
+                            <div class="stat-info">
+                                <h3><span class="counter" data-target="95">0</span>%</h3>
+                                <p>de satisfação com nosso serviço</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section id="how-it-works">
+            <div class="container">
+                <div class="section-title text-center" data-aos="fade-up">
+                    <h2>Simples como deve ser</h2>
+                    <p>Comece a revolucionar sua vida financeira em 3 passos.</p>
+                </div>
+                <div class="row text-center mt-5">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step">
+                            <div class="step-icon"><i class="bi bi-phone-fill"></i></div>
+                            <h4>Baixe e Cadastre-se</h4>
+                            <p>Crie sua conta gratuita em menos de 5 minutos, direto pelo app.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step">
+                            <div class="step-icon"><i class="bi bi-credit-card-2-front-fill"></i></div>
+                            <h4>Peça seu Cartão</h4>
+                            <p>Receba seu cartão de crédito sem anuidade com a tecnologia que você precisa.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step">
+                            <div class="step-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                            <h4>Aproveite os Benefícios</h4>
+                            <p>Veja seu dinheiro render e use todos os recursos na palma da sua mão.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cards">
+            <div class="container">
+                <div class="section-title text-center" data-aos="fade-up">
+                    <h2>Para cada estilo de vida, um cartão personalizado</h2>
+                    <p>Escolha o Nexa Card que mais combina com você e seus objetivos.</p>
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-item">
+                            <img src="https://picpay.com/cartao-de-credito/_next/static/media/cartao-de-credito-picpay-black.364c1460.webp" class="card-image" alt="Cartão Black">
+                            <h3>Cartão Black</h3>
+                            <ul class="card-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Cashback de 1,2%</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Acesso a salas VIP em aeroportos</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Serviço de concierge 24h</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Seguro viagem e Priceless Cities</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="#" class="btn btn-glow d-block">Pedir meu cartão</a>
+                                <a href="#" class="link-more">Saiba mais <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-item">
+                            <img src="https://picpay.com/cartao-de-credito/_next/static/media/cartao-de-credito-picpay-platinum.d2d3a8d2.webp" class="card-image" alt="Cartão Platinum">
+                            <h3>Cartão Platinum</h3>
+                            <ul class="card-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Cashback de 0,5% em todas as compras</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Assistência global de emergência</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Seguro de automóveis</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Benefícios Mastercard Platinum</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="#" class="btn btn-glow d-block">Pedir meu cartão</a>
+                                <a href="#" class="link-more">Saiba mais <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-item">
+                            <img src="https://picpay.com/cartao-de-credito/_next/static/media/cartao-de-credito-picpay-gold.f1d0ea4f.webp" class="card-image" alt="Cartão Gold">
+                            <h3>Cartão Gold</h3>
+                            <ul class="card-features">
+                                <li><i class="bi bi-check-circle-fill"></i> Cartão sem anuidade</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Parcelas em até 18x</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Benefícios Mastercard Surpreenda</li>
+                                <li><i class="bi bi-check-circle-fill"></i> Cashback no Nexa Shop</li>
+                            </ul>
+                            <div class="card-actions">
+                                <a href="#" class="btn btn-glow d-block">Pedir meu cartão</a>
+                                <a href="#" class="link-more">Saiba mais <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section-bg">
+            <div class="container">
+                <div class="section-title text-center" data-aos="fade-up">
+                    <h2>Vantagens para você</h2>
+                    <p>Descubra os recursos que fazem do NexaBank a escolha mais inteligente para o seu dinheiro.</p>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card">
+                            <i class="bi bi-shield-lock-fill"></i>
+                            <h4>Segurança Máxima</h4>
+                            <p>Seus dados e transações protegidos com criptografia de ponta e autenticação biométrica.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                            <h4>Pagamentos Instantâneos</h4>
+                            <p>Envie e receba dinheiro na hora, 24/7, sem taxas. Seu tempo é valioso, seu dinheiro também.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card">
+                            <i class="bi bi-cash-coin"></i>
+                            <h4>Rendimento Inteligente</h4>
+                            <p>Seu saldo rende mais que a poupança automaticamente. Sem complicações, apenas resultados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <div class="section-title text-center" data-aos="fade-up">
+                    <h2>O que nossos clientes dizem</h2>
+                    <p>Milhões de pessoas já confiam no NexaBank para gerenciar suas finanças.</p>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-card">
+                            <p>"O rendimento automático na conta é incrível, meu dinheiro trabalha por mim sem esforço! Mudei de banco e não me arrependo."</p>
+                            <div class="client-info">
+                                <img src="https://placehold.co/60x60/any/fff?text=MS" alt="Cliente Mariana S.">
+                                <div>
+                                    <h5>Mariana S.</h5>
+                                    <span>São Paulo, SP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-card">
+                            <p>"Finalmente um cartão sem anuidade e com um app que funciona de verdade. A interface é limpa e super fácil de usar."</p>
+                            <div class="client-info">
+                                <img src="https://placehold.co/60x60/any/fff?text=JP" alt="Cliente João P.">
+                                <div>
+                                    <h5>João P.</h5>
+                                    <span>Rio de Janeiro, RJ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                         <div class="testimonial-card">
+                            <p>"O atendimento ao cliente me surpreendeu. Rápido, humano e resolveu meu problema na hora pelo chat. Recomendo!"</p>
+                            <div class="client-info">
+                                <img src="https://placehold.co/60x60/any/fff?text=CA" alt="Cliente Carla A.">
+                                <div>
+                                    <h5>Carla A.</h5>
+                                    <span>Belo Horizonte, MG</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sustainability" class="section-bg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="https://placehold.co/600x500/121212/21C25E?text=Sustentabilidade" class="img-fluid" alt="Sustentabilidade">
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                         <div class="section-title text-start">
+                            <h2 style="text-align: left; transform: none;">Um banco para um <br><span class="text-glow">planeta mais verde.</span></h2>
+                         </div>
+                        <p>Acreditamos que a inovação financeira deve andar de mãos dadas com a responsabilidade ambiental. Como um banco 100% digital, reduzimos drasticamente o consumo de papel e nossa pegada de carbono.</p>
+                        <p class="mt-3"><i class="bi bi-tree-fill me-2 icon-green"></i>Investimos parte de nossos lucros em projetos de reflorestamento e energia limpa.</p>
+                        <p><i class="bi bi-recycle me-2 icon-green"></i>Nossos cartões são feitos de material reciclado, reduzindo o lixo plástico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq">
+            <div class="container">
+                <div class="section-title text-center" data-aos="fade-up">
+                    <h2>Dúvidas Frequentes</h2>
+                    <p>Respostas diretas para as suas perguntas mais importantes.</p>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="accordion" id="faqAccordionLeft">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                                        Posso sacar dinheiro com o cartão?
+                                    </button>
+                                </h2>
+                                <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#faqAccordionLeft">
+                                    <div class="accordion-body">
+                                        <p><strong>Pode sim!</strong> Tanto na função débito, quanto na função crédito, limitado ao valor disponível na sua carteira ou ao seu limite de crédito disponível no Nexa Card.</p>
+                                        <p class="small text-secondary">A funcionalidade saque na função crédito não está disponível para o cartão com Limite Garantido.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                                        Qual a bandeira do cartão?
+                                    </button>
+                                </h2>
+                                <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#faqAccordionLeft">
+                                    <div class="accordion-body">
+                                        A bandeira do Nexa Card é <strong>Mastercard</strong>, aceita mundialmente por uma ampla rede de estabelecimentos credenciados.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                                        O cartão é crédito ou débito?
+                                    </button>
+                                </h2>
+                                <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#faqAccordionLeft">
+                                    <div class="accordion-body">
+                                        O Nexa Card é um <strong>cartão múltiplo</strong>, ou seja, ele pode ser crédito e débito. Caso você tenha crédito aprovado, o seu cartão terá as duas funcionalidades.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                                        Como funciona a anuidade?
+                                    </button>
+                                </h2>
+                                <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#faqAccordionLeft">
+                                    <div class="accordion-body">
+                                        <p>O <strong>Nexa Card Gold</strong> oferece <strong>zero anuidade</strong> para todos os clientes.</p>
+                                        <p>Já os cartões <strong>Platinum</strong> e <strong>Black</strong> podem ter isenção da anuidade ao atender a um dos critérios abaixo:</p>
+                                        <ul>
+                                            <li>Gasto mínimo mensal na fatura (R$ 2.000 Platinum / R$ 5.000 Black)</li>
+                                            <li>Investimentos no NexaBank (R$ 20.000 Platinum / R$ 50.000 Black)</li>
+                                            <li>Portabilidade de salário para o NexaBank</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="accordion" id="faqAccordionRight">
+                            
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                                        Como solicitar ou ativar meu cartão?
+                                    </button>
+                                </h2>
+                                <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#faqAccordionRight">
+                                    <div class="accordion-body">
+                                        <p>Para solicitar, é necessário depositar um valor mínimo no <strong>Cofrinho do Cartão</strong>. No momento da ativação, são R$ 50,00 que já começam a render <strong>102% do CDI</strong>.</p>
+                                        <p>Assim que você coloca o valor no Cofrinho, o cartão físico é gerado e enviado, enquanto o virtual fica disponível para uso imediato.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+                                        Quais as principais vantagens do cartão?
+                                    </button>
+                                </h2>
+                                <div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6" data-bs-parent="#faqAccordionRight">
+                                    <div class="accordion-body">
+                                        Usar o Nexa Card na função crédito tem muitas vantagens:
+                                        <ul>
+                                            <li>O valor guardado no Cofrinho do Cartão vira limite de crédito.</li>
+                                            <li>Seu dinheiro fica rendendo 102% do CDI todo dia útil.</li>
+                                            <li>Você começa a criar um bom histórico de crédito com a gente.</li>
+                                            <li>Pode parcelar suas compras e usar em sites e aplicativos.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-7">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+                                        Como funciona o Aumento de Limite Automático?
+                                    </button>
+                                </h2>
+                                <div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7" data-bs-parent="#faqAccordionRight">
+                                    <div class="accordion-body">
+                                        Funciona como um "limite emergencial". Se você precisa de mais limite para uma compra e não tem o valor completo no Cofrinho do Cartão, pode utilizar o valor que você tem no <strong>Saldo da sua conta NexaBank</strong> como limite.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading-8">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+                                        Como acompanhar a entrega do meu cartão?
+                                    </button>
+                                </h2>
+                                <div id="collapse-8" class="accordion-collapse collapse" aria-labelledby="heading-8" data-bs-parent="#faqAccordionRight">
+                                    <div class="accordion-body">
+                                        <p>Você pode acompanhar tudo direto no aplicativo:</p>
+                                        <ol>
+                                            <li>Abra o app NexaBank.</li>
+                                            <li>Toque em "Carteira".</li>
+                                            <li>Depois toque em "Acompanhe o rastreio e desbloqueie o seu cartão".</li>
+                                        </ol>
+                                        <p>Você também receberá um e-mail com todas as atualizações. O prazo de entrega é de até 10 dias úteis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-contact text-center mt-5" data-aos="fade-up">
+                    <h4>Ainda precisa de ajuda?</h4>
+                    <p>Visite nossa Central de Ajuda completa ou entre em contato com nosso time.</p>
+                    <a href="#" class="btn btn-outline-light mt-2">Ir para a Central de Ajuda</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="final-cta" class="section-bg">
+            <div class="container text-center" data-aos="zoom-in">
+                <h3>Pronto para começar a revolução?</h3>
+                <p>Junte-se a milhões de pessoas que escolheram um futuro financeiro mais inteligente e simples.</p>
+                <a href="#" class="btn btn-glow btn-lg mt-3">Abra sua conta gratuita</a>
+                 <small class="mt-2 microcopy d-block">✓ Sem taxas, sem burocracia.</small>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <a class="navbar-brand mb-3 d-block" href="#">
+                            <svg width="110" height="37" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g clip-path="url(#logo_svg__a-footer)"><path d="M18.504 23.928h4.212V11.661h-4.212v12.267Zm5.661-20.61H21.33v2.835h2.835V3.318ZM8.271 4.695H4.212V8.25h3.771c2.394 0 3.771 1.161 3.771 3.339S10.377 15 7.983 15H4.212V8.322H0v15.606h4.212v-5.373h3.996c4.86 0 7.695-2.61 7.695-7.11-.009-4.212-2.763-6.75-7.632-6.75ZM27 .483h-8.496v8.496H27V.483Zm-1.377 7.038h-5.661V1.86h5.661v5.661Zm24.678-2.826h-3.843V8.25h3.627c2.394 0 3.771 1.161 3.771 3.339S52.479 15 50.085 15h-3.627V8.322h-4.212v15.606h4.212v-5.373h3.843c4.86 0 7.695-2.61 7.695-7.11 0-4.212-2.835-6.75-7.695-6.75Zm35.343 4.5-3.627 9.144-3.627-9.144h-4.356l5.805 14.733-2.25 5.589h4.428L90 9.195h-4.356Zm-18.873-.072c-2.538 0-4.5.585-6.678 1.665l1.305 2.907c1.521-.873 3.051-1.305 4.428-1.305 2.034 0 3.051.873 3.051 2.466v.288h-4.068c-3.627 0-5.589 1.665-5.589 4.428 0 2.682 1.89 4.572 5.085 4.572 2.034 0 3.483-.729 4.644-1.962v1.593h4.14v-9.576c-.144-3.123-2.394-5.076-6.318-5.076Zm2.475 9.864c-.432 1.233-1.665 2.25-3.411 2.25-1.449 0-2.322-.729-2.322-1.89s.801-1.665 2.394-1.665h3.339v1.305Zm-35.784 1.746c-2.034 0-3.483-1.593-3.483-3.996 0-2.322 1.449-3.915 3.483-3.915 1.449 0 2.538.585 3.339 1.593l2.835-2.034c-1.305-1.962-3.555-3.123-6.39-3.123-4.428-.072-7.479 2.979-7.479 7.479s3.051 7.479 7.479 7.479c3.051 0 5.301-1.233 6.534-3.267l-2.907-1.962c-.729 1.161-1.89 1.746-3.411 1.746Z" fill="var(--primary-color)"></path></g><defs><clipPath id="logo_svg__a-footer"><path fill="#fff" transform="translate(0 .483)" d="M0 0h90v29.034H0z"></path></clipPath></defs></svg>
+                        </a>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="tiktok"><i class="bi bi-tiktok"></i></a>
+                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="youtube"><i class="bi bi-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Pra você</h4>
+                        <ul>
+                            <li><a href="#">Conta digital</a></li>
+                            <li><a href="#">Cartão de crédito</a></li>
+                            <li><a href="#">Rendimento</a></li>
+                            <li><a href="#">Empréstimos</a></li>
+                            <li><a href="#">PicPay Invest</a></li>
+                            <li><a href="#">Seguros</a></li>
+                            <li><a href="#">PicPay Shop</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Para seu negócio</h4>
+                        <ul>
+                            <li><a href="#">PicPay Negócios</a></li>
+                            <li><a href="#">Venda online</a></li>
+                            <li><a href="#">Maquininhas</a></li>
+                            <li><a href="#">PicPay Ads</a></li>
+                            <li><a href="#">PicPay Benefícios</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Institucional</h4>
+                        <ul>
+                            <li><a href="#">Sobre nós</a></li>
+                            <li><a href="#">Carreiras</a></li>
+                            <li><a href="#">Open Finance</a></li>
+                            <li><a href="#">Ética e Compliance</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Relatórios</a></li>
+                            <li><a href="#">Demonstrações</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-6 footer-links">
+                        <h4>Ajuda</h4>
+                        <ul>
+                            <li><a href="#">Central de Ajuda</a></li>
+                            <li><a href="#">Canais de atendimento</a></li>
+                            <li><a href="#">Ouvidoria</a></li>
+                            <li><a href="#">Taxas e tarifas</a></li>
+                            <li><a href="#">Renegociação</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-5 footer-contact-info">
+                    <div class="col-md-4">
+                        <h5><i class="bi bi-headset"></i> SAC</h5>
+                        <p>0800 025 8000<br>Disponível todos os dias, 24h.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5><i class="bi bi-person-video3"></i> SAC em Libras</h5>
+                        <p>Acesse nosso canal<br>Dias úteis, das 10h às 16h.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5><i class="bi bi-briefcase-fill"></i> SAC PicPay Negócios</h5>
+                        <p>4003 3163 ou 0800 882 3163<br>Disponível de seg a dom, 24h.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container clearfix">
+                <div class="footer-bottom">
+                    <div class="container clearfix">
+                        <div class="copyright">
+                            &copy; 2025 <strong><span>PicPay</span></strong>. Todos os direitos reservados.
+                        </div>
+                        <div class="credits">
+                            PicPay Instituição de Pagamento S.A. - CNPJ: 22.896.431/0001-1
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="src/scripts/commons/pagina_inicial.js"></script>
+</body>
+</html>
